@@ -5,17 +5,8 @@
   align-items: center;
   flex-direction: column;
 
-  .value-container {
-    margin-bottom: 25px;
-
-    #demo {
-      color: fuchsia;
-      font-size: 60px;
-    }
-  }
-
   .slider {
-    width: 80%;
+    width: 100%;
     cursor: pointer;
   }
 }

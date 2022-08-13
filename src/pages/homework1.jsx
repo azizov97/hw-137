@@ -1,5 +1,9 @@
+import { useState } from "react";
 import "../style/homework1.scss";
+
 const Homework1 = () => {
+  const [value, onChange] = useState(1);
+
   return (
     <>
       <div>
@@ -8,18 +12,23 @@ const Homework1 = () => {
       </div>
 
       <div className="slider-container">
-        <div className="value-container">
-          <span id="demo">0</span>
-        </div>
         <input
-          type="range"
-          min={0}
-          max={100}
-          value={0}
           className="slider"
-          id="myRange"
+          type="range"
+          min="1"
+          max="100"
+          value={value}
+          onChange={({ target: { value } }) => {
+            onChange(value);
+          }}
         />
       </div>
+      <button
+        className="btn btn-outline-info mt-4"
+        onClick={() => alert(`value = ${value}`)}
+      >
+        Show Data
+      </button>
     </>
   );
 };
